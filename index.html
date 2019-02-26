@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 15px 15px;
+  font-size: 15px;
+  width: 15%;
+}
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 15px 15px;
+  text-decoration: none;
+  font-size: 15px;
+}
+.topnav .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 0px;
+  margin-right: 10px;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+}
+.topnav input[type=text] {
+  padding: 5px;
+  margin-top: 0px;
+  font-size: 14px;
+  border: none;
+}
+
+
+.tablink:hover {
+  background-color: green;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#Haberler {background:green;}
+#Tarihce {background-color: green;}
+#Takimlar {background-color: green;}
+#Fiksturler {background-color: green;}
+#PuanTablolari {background-color: green;}
+#Iletisim {background-color: green;}
+</style>
+</head>
+<body>
+
+<button class="tablink" onclick="openPage('Haberler', this, 'green')" id="defaultOpen">Haberler</button>
+<button class="tablink" onclick="openPage('Tarihce', this, 'green')" >Tarihce</button>
+<button class="tablink" onclick="openPage('Takimlar', this, 'green')">Takimlar</button>
+<button class="tablink" onclick="openPage('Fiksturler', this, 'green')">Fiksturler</button>
+<button class="tablink" onclick="openPage('PuanTablolari', this, 'green')">PuanTablolari</button>
+<button class="tablink" onclick="openPage('Iletisim', this, 'green')">Iletisim</button>
+
+<div class="topnav">
+  <input type="text" placeholder="Search..">
+</div>
+
+<div id="Haberler" class="tabcontent">
+  <h3>Haberler</h3>
+  <p>Haber İçerikleri</p>
+</div>
+
+<div id="Tarihce" class="tabcontent">
+  <h3>Tarihçe</h3>
+  <p>Tarihçemiz</p> 
+</div>
+
+<div id="Takimlar" class="tabcontent">
+  <h3>Takımlar</h3>
+  <p>Takımlarımız</p>
+</div>
+
+<div id="Fiksturler" class="tabcontent">
+  <h3>Fikstürler</h3>
+  <p>Oynanacak Maçlar</p>
+</div>
+
+<div id="PuanTablolari"" class="tabcontent">
+  <h3>Puan Tabloları</h3>
+  <p>Puan Tabloları</p>
+</div>
+
+<div id="Iletisim" class="tabcontent">
+  <h3>İletişim</h3>
+  <p>İletişim</p>
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html>
