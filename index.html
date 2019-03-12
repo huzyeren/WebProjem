@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Basic html layout example</title>
+  <title>FENERBAHÇE</title>
   <link rel="stylesheet" type="text/css" href="style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -12,51 +12,66 @@
     <h1 align="center" style="color:yellow;">FENERBAHÇE SPOR KULÜBÜ</h1>    
   </div>
   </header>
-  
 
 <button class="tablink" onclick="openPage('Haberler', this, 'blue')" id="defaultOpen">Haberler</button>
 <button class="tablink" onclick="openPage('Tarihçe', this, 'blue')" >Tarihçe</button>
 <button class="tablink" onclick="openPage('Takimlar', this, 'blue')" >Takimlar</button>
 <button class="tablink" onclick="openPage('Fikstürler', this, 'blue')">Fikstürler</button>
-<button class="tablink" onclick="openPage('PuanTablolari', this, 'blue')">PuanTablolari</button>
-<button class="tablink" onclick="openPage('Iletisim', this, 'blue')">Iletisim</button><br><br><br><br><br><br><br>
+<button class="tablink" onclick="openPage('PuanTablolari', this, 'blue')">PuanTablolari</button><br><br>
+  
 
 
-
-
-<script>
-function openPage(pageName,elmnt,color) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].style.backgroundColor = "";
-  }
-  document.getElementById(pageName).style.display = "block";
-  elmnt.style.backgroundColor = color;
-}
-
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
-</script>
-   
-
-  <nav>
-    < nav >
-    <ul>
-      <li></li>
-      <li></li>
-      <li></li>
-    </ul>
-  </nav>
   <section>
-    < section >
-    <header>< header ></header>
-    <article>< article ></article>
-    <footer>< footer ></footer>
+    <div class="container">
+
+  <!-- Full-width images with number text -->
+  <div class="mySlides">
+    <div class="numbertext">1 / 4</div>
+      <img src="resimler/alikoc.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 4</div>
+      <img src="resimler/comolli.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 4</div>
+      <img src="resimler/moses.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">4 / 4</div>
+      <img src="resimler/transfer.jpg" style="width:100%">
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  <!-- Image text -->
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <!-- Thumbnail images -->
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="resimler/alikoc.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+    </div>
+    <div class="column"> 
+      <img class="demo cursor" src="resimler/comolli.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="resimler/moses.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="resimler/transfer.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+    </div>
+  </div>
+</div>
+
+
   </section>
   <aside>
     < aside >
@@ -64,5 +79,6 @@ document.getElementById("defaultOpen").click();
   <footer>
     < footer >
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>
